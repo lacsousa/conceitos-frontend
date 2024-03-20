@@ -12,4 +12,6 @@
  * 
  *  1 - yarn add react react-dom
  *  2 - yarn add @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli
+ *  3 - yarn add @babel/cli
+ * 
  */
