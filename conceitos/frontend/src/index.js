@@ -1,3 +1,8 @@
-import { soma } from './soma';
+import React from 'react';
+import { render } from 'react-dom';
 
-console.log(soma(10, 5));
+import App from './App';
+
+// JSX: HTML dentro do Javascipt (Javascript XML)
+
+render(<App />, document.getElementById('app'));
