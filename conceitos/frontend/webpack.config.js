@@ -1,9 +1,10 @@
 const path = require('path');
 
-/* Aqui tem a instalação do babel-loader
+/* Aqui tem a instalação de alguns loaders
 
     yarn add babel-loader
-
+    yarn add styled-loader css-loader
+    yarn add file-loader
 */
 
 module.exports = {
@@ -25,12 +26,25 @@ module.exports = {
                use: {
                 loader: 'babel-loader', 
                }     
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                ]
+            },
+            {
+                test: /.*\.(gif|png|jpe?g)$/i,
+                use: {
+                    loader: 'file-loader',
+                }
             }
         ]
     },
 };
 
-// yarn webpack --mode development
 
 // yarn add webpack-dev-server -D
 
